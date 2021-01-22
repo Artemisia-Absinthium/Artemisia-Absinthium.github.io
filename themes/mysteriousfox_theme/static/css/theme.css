@@ -1,0 +1,18 @@
+.nav_path_text {
+	white-space: nowrap;
+}
+
+.blinker {
+	animation: blinker 1s linear infinite;
+	animation-timing-function: step-end;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+.nav-item {
+	text-align: right;
+}
