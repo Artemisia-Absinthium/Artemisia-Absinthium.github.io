@@ -7,20 +7,25 @@ theme = "Mysteriousfox_theme"
     description = "My site description"
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "transgender-alt"
-    url = "/"
-    weight = 1
+#  [[menu.main]]
+#    name = "Home"
+#    pre = "paw"
+#    url = "/"
+#    weight = 1
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    pre = "american-express"
+    pre = "folder"
     title  = "blog section"
     url = "/blog/"
     weight = 2
   [[menu.main]]
     name = "Tags"
-    pre = "helicopter"
+    pre = "database"
     url = "/tags/"
     weight = 3
+  [[menu.main]]
+    name = "About Me"
+    pre = "female"
+    url = "/about/"
+    weight = 4

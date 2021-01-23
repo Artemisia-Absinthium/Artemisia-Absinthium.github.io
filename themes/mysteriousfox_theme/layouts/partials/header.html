@@ -1,13 +1,14 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-dark nav_background_color">
+    <div class="container-fluid ">
         {{ $title := print .File.Path }}
         {{ $title := replace $title "\\" "/"  }}
-        {{ $title := replace $title "_index.md" ""  }}
+        {{ $title := replace $title "_index.md" "" }}
         {{ $title := replace $title ".md" ""  }}
-        <a class="navbar-brand" href="#">amelia@mysteriousfox: </a>
+        {{ $title := substr $title 0 -1 }}
+        <a class="navbar-brand nav_path_text nav_text_color_1" href="/">amelia@mysteriousfox: </a>
 
-        <span class="navbar-text nav_path_text">
-            ~/{{ replace $title "\\" "/" }}$ <span class="blinker">_</span>
+        <span class="navbar-text nav_path_text nav_text_color_2">
+            ~/{{ print $title}} <span class="nav_text_color_3"> $ </span><span class="blinker">_</span>
         </span>
 
         <button class="navbar-toggler ms-auto" 
@@ -21,9 +22,10 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navBarLinks">
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav ms-auto top_menu_link">
+                {{ $SavedPermalink := .Permalink }}
                 {{ range .Site.Menus.main }}
-                <a class="nav-item nav-link" href="{{ .URL }}">
+                <a class="nav-item nav-link {{if in $SavedPermalink .URL }}active {{end}}" href="{{ .URL }}">
                 {{ if .Pre }}
                 {{ $icon := printf "<i class=\"fi fi-%s\"></i>" .Pre | safeHTML }}
                 {{ $icon }}
@@ -36,23 +38,3 @@
         </div>
     </div>
   </nav>
-
-<!--
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-
-<div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-        <a class="nav-link" href="{{ .URL }}">
-        {{ if .Pre }}
-        {{ $icon := printf "<i class=\"fi fi-%s\"></i>" .Pre | safeHTML }}
-        {{ $icon }}
-        {{ end }}
-        {{ $text := print .Name | safeHTML }}
-        {{ $text }}
-        </a>
-        {{ end }}
-    </nav>
-</div>
-
- --> 
