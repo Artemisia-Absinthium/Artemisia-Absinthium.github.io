@@ -1,3 +1,6 @@
+---
+title: "Tags"
+---
 
 # Heading
 

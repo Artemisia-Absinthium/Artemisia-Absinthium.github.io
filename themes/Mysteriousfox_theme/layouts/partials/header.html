@@ -1,14 +1,17 @@
-<nav class="navbar navbar-expand-md navbar-dark nav_background_color">
+<nav class="navbar navbar-expand-md navbar-light nav_background_color">
     <div class="container-fluid ">
         {{ $title := print .File.Path }}
-        {{ $title := replace $title "\\" "/"  }}
+        {{ $title := replace $title "\\" "/" }}
+        {{ $title := index (split $title "/") 0 }}
         {{ $title := replace $title "_index.md" "" }}
-        {{ $title := replace $title ".md" ""  }}
-        {{ $title := substr $title 0 -1 }}
-        <a class="navbar-brand nav_path_text nav_text_color_1" href="/">amelia@mysteriousfox: </a>
+        {{ $title := print ":~/" $title }}
+        {{ $title := print $title "/" }}
+        {{ $title := replace $title "//" "/" }}
 
-        <span class="navbar-text nav_path_text nav_text_color_2">
-            ~/{{ print $title}} <span class="nav_text_color_3"> $ </span><span class="blinker">_</span>
+        <a class="navbar-brand nav_path_text nav_text_color_1" href="/">amelia@mysteriousfox </a>
+
+        <span class="navbar-text nav_path_text nav_text_color_2 d-none d-sm-block">
+            {{ print $title }} <span class="nav_text_color_2"> $ </span><span class="blinker">_</span>
         </span>
 
         <button class="navbar-toggler ms-auto" 

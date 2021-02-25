@@ -25,7 +25,7 @@ theme = "Mysteriousfox_theme"
     url = "/tags/"
     weight = 3
   [[menu.main]]
-    name = "About Me"
+    name = "Contact Me"
     pre = "female"
-    url = "/about/"
+    url = "/ContactMe/"
     weight = 4

@@ -1,13 +1,14 @@
 :root {
-	--mf-light_shades: #fef0ff;
+	--mf-light_shades: #fcf6fc;
 	--mf-light_accent: #fef0ff;
 	--mf-main_color: #d6c8ff;
 	--mf-dark_accent: #c79ecf;
-	--mf-dark_shades: #7e6bc4;
-	--mf-nav_background_color: #18131e;
-	--mf-nav_text_color_1: #22e529;
-	--mf-nav_text_color_2: #9892f1;
-	--mf-nav_text_color_3: #dd7bdc;
+	--mf-dark_shades: #7261af;
+	--mf-darker_shades: #352a5e;
+	--mf-nav_background_color: #e4dcfd;
+	--mf-nav_text_color_1: #352a5e;
+	--mf-nav_text_color_2: #352a5e;
+	--mf-nav_text_color_3: #d82dd5;
 }
 
 .nav_background_color {
@@ -37,6 +38,9 @@
 }
 .text_dark_shades {
 	color: var(--mf-dark_shades) !important;
+}
+.text_darker_shades {
+	color: var(--mf-darker_shades) !important;
 }
 
 .background_light_shades {
@@ -68,6 +72,15 @@ body {
 	font-family: 'Fantasque Sans Mono';
 }
 
+a {
+	text-decoration: none;
+	font-weight: 800;
+}
+
+p {
+	padding-left: 10px;
+}
+
 .nav_path_text {
 	white-space: nowrap;
 	font-size: 1.25rem;
@@ -90,40 +103,64 @@ body {
 }
 
 main > .container {
-	padding: 5% 10% 0;
+	padding: 2% 10% 0;
+}
+
+.footer-line {
+	border: 0;
+	height: 1px;
+	text-align: center;
+	background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.footer-line:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -13px;
+	padding: 0 10px;
+	color: var(--mf-darker_shades);
+	font-size: 22px;
 }
 
 .footer_text {
 	margin-bottom: 0;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 }
 
-.footer_text a {
-	text-decoration: none;
+.footer_text_with_space {
+	margin: 0.5em;
 }
 
-.footer_text a:link {
-	color: var(--mf-nav_text_color_2);
+.footer_text_color {
+	color: black;
 }
 
-.footer_text a:visited {
-	color: var(--mf-nav_text_color_2);
+a:link {
+	color: var(--mf-dark_shades);
 }
 
-.footer_text a:hover {
+a:visited {
+	color: var(--mf-dark_shades);
+}
+
+a:hover {
 	color: var(--mf-nav_text_color_3);
 }
 
-.footer_text a:active {
+a:active {
 	color: var(--mf-nav_text_color_1);
 }
 
 .top_menu_link a:link {
-	color: var(--mf-light_shades) !important;
+	color: var(--mf-light_accent) !important;
 }
 
 .top_menu_link a:visited {
-	color: var(--mf-light_shades) !important;
+	color: var(--mf-light_accent) !important;
 }
 
 .top_menu_link a:hover {
