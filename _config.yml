@@ -22,3 +22,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+sass:
+  load_paths: 
+    - assets/css
+    - _sass
+  
