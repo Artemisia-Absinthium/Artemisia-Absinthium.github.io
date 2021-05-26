@@ -24,7 +24,5 @@ plugins:
   - jekyll-seo-tag
 
 sass:
-  load_paths: 
-    - assets/css
-    - _sass
-  
+  sass_dir: _sass
+  style: compressed
